@@ -1,9 +1,9 @@
 const tasks = require("./taskStorage");
 
 const TaskFetcher = {
-    getAllTasks() {
-        return tasks;
-    }
+  getUserTasks(userId) {
+    return tasks.filter(task => task.userId === userId);
+  }
 };
 
 module.exports = TaskFetcher;

@@ -40,7 +40,7 @@ const authenticateToken = async (req, res, next) => {
 };
 
 // User Signup Route
-app.post("/signup", async (req, res) => {
+/*app.post("/signup", async (req, res) => {
   try {
     const { email, password } = req.body;
     if (!email || !password) {
@@ -53,9 +53,9 @@ app.post("/signup", async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 });
-
+*/
 // Protected Task Routes
 app.use("/tasks", authenticateToken, taskRoutes);
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`🔥 Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(` Server running on port ${PORT}`));
